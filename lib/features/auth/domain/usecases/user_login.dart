@@ -7,7 +7,7 @@ import 'package:blog_app_bloc/features/auth/domain/repository/auth_repository.da
 
 class UserLogin implements UseCase<User, UserLoginParams> {
   final AuthRepository authRepository;
-  UserLogin({required this.authRepository});
+  UserLogin(this.authRepository);
 
   @override
   Future<Either<Failure, User>> call(UserLoginParams params) async {
